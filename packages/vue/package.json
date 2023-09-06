@@ -1,0 +1,38 @@
+{
+  "name": "@notionify/vue",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "bugs": {
+    "url": "https://github.com/npldevfr/notionify/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tsconfig": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

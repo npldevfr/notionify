@@ -1,0 +1,51 @@
+{
+  "name": "notionify",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.0.0",
+  "description": "Vue port of Notion's UI",
+  "author": "npldevfr",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npldevfr/notionify.git"
+  },
+  "bugs": "https://github.com/npldevfr/notionify/issues",
+  "keywords": [
+    "vue",
+    "notion",
+    "ui",
+    "component",
+    "library"
+  ],
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  },
+  "scripts": {
+    "build": "turbo run build --ignore='./packages/example-package' --filter='./packages/**'",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage",
+    "release": "bumpp package.json packages/*/package.json",
+    "clean": "rimraf 'packages/**/node_modules' 'playground/**/node_modules' 'node_modules'",
+    "clean:dist": "rimraf 'packages/**/dist' 'playground/**/dist'"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@vitest/coverage-c8": "^0.33.0",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.45.0",
+    "rimraf": "^5.0.1",
+    "tsup": "^7.1.0",
+    "turbo": "^1.10.11",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "vite": "^4.4.4",
+    "vitest": "^0.33.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
