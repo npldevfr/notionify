@@ -70,6 +70,9 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4
     devDependencies:
+      '@notionify/vue':
+        specifier: workspace:*
+        version: link:../../packages/vue
       '@vitejs/plugin-vue':
         specifier: ^4.2.3
         version: 4.3.4(vite@4.4.8)(vue@3.3.4)
